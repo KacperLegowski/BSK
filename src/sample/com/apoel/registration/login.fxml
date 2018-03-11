@@ -6,15 +6,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.com.apoel.registration.LogInController">
    <children>
       <Label layoutX="66.0" layoutY="51.0" text="Login: " />
-      <PasswordField layoutX="66.0" fx:id="password" layoutY="200.0" promptText="password" />
+      <PasswordField fx:id="password" layoutX="66.0" layoutY="200.0" promptText="password" />
       <Label layoutX="66.0" layoutY="163.0" text="Password:" />
-      <TextField layoutX="66.0" fx:id="login" layoutY="90.0" promptText="login" />
-      <Button layoutX="67.0" fx:id="loginButton" onAction="#logIn" layoutY="273.0" mnemonicParsing="false" text="Log in" />
-      <Label layoutX="71.0" layoutY="372.0" text="Does not have account ?" />
-      <Button layoutX="247.0" fx:id="registrationButton" onAction="#goToRegistration" layoutY="367.0" mnemonicParsing="false" text="Register" />
+      <TextField fx:id="login" layoutX="66.0" layoutY="90.0" promptText="login" />
+      <Button fx:id="loginButton" layoutX="67.0" layoutY="273.0" mnemonicParsing="false" onAction="#logIn" text="Log in" />
+      <Label layoutX="71.0" layoutY="372.0" text="Don't have an account ?" />
+      <Button fx:id="registrationButton" layoutX="247.0" layoutY="367.0" mnemonicParsing="false" onAction="#goToRegistration" text="Register" />
    </children>
 </AnchorPane>
