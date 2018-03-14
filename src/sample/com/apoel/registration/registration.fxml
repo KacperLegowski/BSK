@@ -15,7 +15,7 @@
       <Label layoutX="58.0" layoutY="240.0" text="Repeat password:" />
       <PasswordField layoutX="58.0" fx:id="password" layoutY="187.0" promptText="password" />
       <PasswordField layoutX="58.0" fx:id="repeatPassword" layoutY="280.0" promptText="repeat password" />
-      <Button layoutX="58.0" fx:id="registrationButton" layoutY="359.0" mnemonicParsing="false" text="Register" />
+      <Button layoutX="58.0" fx:id="registrationButton" onAction="#register" layoutY="359.0" mnemonicParsing="false" text="Register" />
       <Label layoutX="61.0" fx:id="errorLabel" layoutY="419.0" />
    </children>
 </AnchorPane>

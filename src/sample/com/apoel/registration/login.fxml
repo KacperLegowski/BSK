@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.com.apoel.registration.LogInController">
    <children>
-      <Label layoutX="66.0" layoutY="51.0" text="Login: " />
+      <Label fx:id="error" layoutX="66.0" layoutY="321.0" textFill="#d31212" />
       <PasswordField fx:id="password" layoutX="66.0" layoutY="200.0" promptText="password" />
       <Label layoutX="66.0" layoutY="163.0" text="Password:" />
       <TextField fx:id="login" layoutX="66.0" layoutY="90.0" promptText="login" />

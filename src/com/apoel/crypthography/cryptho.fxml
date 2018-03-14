@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" fx:controller="com.apoel.crypthography.CrypthoController" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <items>
       <AnchorPane prefHeight="450.0" prefWidth="450.0">
          <children>
-            <ProgressBar layoutX="113.0" layoutY="375.0" prefHeight="23.0" prefWidth="298.0" progress="0.0" />
-            <Button layoutX="27.0" layoutY="371.0" mnemonicParsing="false" text="Encrypt" />
-            <Button layoutX="103.0" layoutY="61.0" mnemonicParsing="false" text="choose" />
+            <ProgressBar fx:id="encryptBar" layoutX="113.0" layoutY="375.0" prefHeight="23.0" prefWidth="298.0" progress="0.0" />
+            <Button fx:id="encryptButton" onAction="#encrypt" layoutX="27.0" layoutY="371.0" mnemonicParsing="false" text="Encrypt" />
+            <Button fx:id="fileButton" onAction="#chooseFile" layoutX="103.0" layoutY="61.0" mnemonicParsing="false" text="choose" />
             <Label layoutX="21.0" layoutY="66.0" text="Choose file:" />
             <Label layoutX="21.0" layoutY="14.0" text="Encrypting Side" textFill="#9a0a0a">
                <font>
@@ -23,11 +23,11 @@
                </font>
             </Label>
             <Label graphicTextGap="2.0" layoutX="21.0" layoutY="105.0" text="Choose operating mode:" />
-            <ComboBox layoutX="187.0" layoutY="100.0" prefWidth="150.0" />
+            <ComboBox fx:id="modeBox" layoutX="187.0" layoutY="100.0" prefWidth="150.0" />
             <Label graphicTextGap="2.0" layoutX="21.0" layoutY="148.0" text="Choose file receiver:" />
-            <ComboBox layoutX="162.0" layoutY="143.0" prefWidth="150.0" />
+            <ComboBox fx:id="receiverBox" layoutX="162.0" layoutY="143.0" prefWidth="150.0" />
             <Label layoutX="21.0" layoutY="192.0" text="Generate session key:" />
-            <Button layoutX="168.0" layoutY="187.0" mnemonicParsing="false" text="Generate" />
+            <Button fx:id="generateButton" onAction="#generateSessionKey" layoutX="168.0" layoutY="187.0" mnemonicParsing="false" text="Generate" />
             <Label layoutX="162.0" layoutY="66.0" text="text.txt" />
          </children></AnchorPane>
       <AnchorPane prefHeight="450.0" prefWidth="450.0">
@@ -40,15 +40,15 @@
             <Label layoutX="23.0" layoutY="66.0" text="Operating mode:" />
             <Label layoutX="23.0" layoutY="105.0" text="Choose your login:" />
             <Label layoutX="23.0" layoutY="144.0" text="File name:" />
-            <Button layoutX="26.0" layoutY="370.0" mnemonicParsing="false" text="Decrypt" />
-            <ProgressBar layoutX="130.0" layoutY="374.0" prefHeight="23.0" prefWidth="251.0" progress="0.0" />
-            <Label layoutX="141.0" layoutY="63.0" text="CFB" textFill="#2d900f">
+            <Button fx:id="decryptButton" onAction="#decrypt" layoutX="26.0" layoutY="370.0" mnemonicParsing="false" text="Decrypt" />
+            <ProgressBar fx:id="decryptBarr" layoutX="130.0" layoutY="374.0" prefHeight="23.0" prefWidth="251.0" progress="0.0" />
+            <Label fx:id="modeField" layoutX="141.0" layoutY="63.0" text="CFB" textFill="#2d900f">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <ComboBox layoutX="148.0" layoutY="100.0" prefWidth="150.0" />
-            <TextField layoutX="98.0" layoutY="139.0" />
+            <ComboBox fx:id="loginBox" layoutX="148.0" layoutY="100.0" prefWidth="150.0" />
+            <TextField fx:id="fileName" layoutX="98.0" layoutY="139.0" />
             <Label layoutX="23.0" layoutY="179.0" text="Save direction:" />
             <Button layoutX="130.0" layoutY="174.0" mnemonicParsing="false" text="Save" />
          </children></AnchorPane>
